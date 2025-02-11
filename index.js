@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 import { app } from './app.js'
-import connectDB from './src/db/ConnectDB.js';
+import connectDB from './src/db/connectDB.js';
 
 
 app.get('/hello', (req, res) => {
