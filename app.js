@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: true, limit: "50kb" }))
 app.use(express.static("public"))
 app.use(cookieParser())
 
+
 app.options('*', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -34,7 +35,7 @@ import { headerVerify } from './src/middleware/HeaderVerify.js'
 app.use('/api/v1/college', headerVerify, collegeRouter)
 
 
-app.get('/sanu', (req, res) => {
+app.get('/api/sanu', (req, res) => {
     res.status(200).json({ message: 'ha bhai' });
  });
  
